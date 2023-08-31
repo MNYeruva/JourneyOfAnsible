@@ -1,0 +1,6 @@
+# Ansible Installation On CentOS
+
+To Check - yum list all | grep ansible
+
+$ yum install ansible
+$ ansible --vesrion
