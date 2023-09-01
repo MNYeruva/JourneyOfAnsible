@@ -12,6 +12,13 @@ ansible -i sample-inv all -e ansible_user=centos -e ansible_password=DevOps321 -
 
 
 Playbook:
+    - Playbook has multiple plays
+    - Playbook file itself is a list
+    - playbook book should have at least one play
+    - Play must have information about the inventory group(hosts)
+    - It should have the information that it should load tasks or roles
+    - In general, we provide an optional key name to denote the purpose of the play or task
+
  Markup language will help in sharing the information between systems.
  That been extended the sharing of info from user to system or system to user.
 
