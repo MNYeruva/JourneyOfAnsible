@@ -30,3 +30,10 @@ Yet Another Markup Language(YAML)(.yaml and .yml)
  Key - Value -Plain
  Key - Multiple Values - List
  Key - Key - Value - Map
+
+ Ansible Variables Pre-Defined from User(Hardcoded)
+    - Play Level Variables
+    - Variables from a file
+    - Task Level Variables
+    - Inventory file Variables
+    - Command Line Variables

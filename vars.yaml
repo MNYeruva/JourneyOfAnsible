@@ -8,6 +8,18 @@
         msg: URL == {{URL}}
 
 
+- name: Declare variable in another file
+  hosts: all
+  connection: local
+  vars_files:
+    - var.yaml
+  tasks:
+    - name: Access a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+# vars_files can also be declared on task level.
+
+
 - name: Declare variable at play level
   hosts: all
   connection: local #To run the script into local system
@@ -17,3 +29,19 @@
         msg: URL == {{URL}}
       vars:
         URL: task.example.com     #We can access current task only
+
+- name: Declare variable from inventory file
+  hosts: all
+  connection: local
+  tasks:
+    - name: Access a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+# ansible-playbook -i inv vars.yaml
+
+
+# ansible-playbook -i inv vars.yaml -e URL=cli.example.com -->Command Line Variables
+
+
+
+
