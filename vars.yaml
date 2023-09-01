@@ -50,4 +50,14 @@
     - Inventory variables
 
 
+- Ansible pre-defined variables(Facts)
+- name: Access a fact
+  hosts: all
+  connection: local
+  tasks:
+    - name: Access fact
+      ansible.builtin.debug:
+        msg: Ansible Host name == {{ansible_fqdn}}
+
+
 
