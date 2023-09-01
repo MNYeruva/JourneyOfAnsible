@@ -45,9 +45,11 @@
 - Variables are looking/executing for the below priority  (High to Low)
     - Command line Variables
     - Task Level
+    - vars dir from roles
     - Variable from files
     - Play Level variables
     - Inventory variables
+    - default dir from roles
 
 
 - Ansible pre-defined variables(Facts)
