@@ -42,6 +42,12 @@
 
 # ansible-playbook -i inv vars.yaml -e URL=cli.example.com -->Command Line Variables
 
+- Variables are looking/executing for the below priority  (High to Low)
+    - Command line Variables
+    - Task Level
+    - Variable from files
+    - Play Level variables
+    - Inventory variables
 
 
 
