@@ -1,0 +1,19 @@
+- name: Declare variable at play level
+  hosts: all
+  vars:
+    URL: play.example.com   #Play level we are assign variable we can call any task
+  tasks:
+    - name: Access a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+
+
+- name: Declare variable at play level
+  hosts: all
+  connection: local #To run the script into local system
+  tasks:
+    - name: Declare and access a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+      vars:
+        URL: task.example.com     #We can access current task only
