@@ -4,3 +4,22 @@ To Check - yum list all | grep ansible
 
 $ yum install ansible
 $ ansible --vesrion
+
+
+[ root@Ansible ~ ]# ansible -i sample-inv all -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.shell -a id
+
+ansible -i sample-inv all -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.yum -b -a "name=ngnix"(-b become sudo user(root))
+
+
+Playbook:
+ Markup language will help in sharing the information between systems.
+ That been extended the sharing of info from user to system or system to user.
+
+ XMl, JSON, YAML
+eXtensible Markup Language(XML)
+Java Script Object Notation(JSON)
+Yet Another Markup Language(YAML)(.yaml and .yml)
+
+ Key - Value -Plain
+ Key - Multiple Values - List
+ Key - Key - Value - Map
