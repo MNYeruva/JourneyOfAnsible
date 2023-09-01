@@ -64,6 +64,22 @@
   - From task output(register)
   - Set variable using task(set_task)
 
+- name: Register a variable
+  hosts: all
+  connection: local
+  tasks:
+    - name: Run a shell command
+      ansible.builtin.shell: uptime
+      register: out
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{out}}"    // {{out.stdout}}    --> out is a variable, variable starts with "{{out}}"
+
+    - name: set a fact
+      ansible.builtin.set_fact:
+      OUTPUT: "{{out}}"        // {{out.stdout}}
+
+
 
 
 
