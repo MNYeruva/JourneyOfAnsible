@@ -1,0 +1,4 @@
+- URL: role.example.com
+  ansible.builtin.debug:
+    msg: Hello from Role
+
