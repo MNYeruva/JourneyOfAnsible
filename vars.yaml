@@ -60,4 +60,31 @@
         msg: Ansible Host name == {{ansible_fqdn}}
 
 
+- Ansible RUN TIME Variables
+  - From task output(register)
+  - Set variable using task(set_task)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
