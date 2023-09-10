@@ -7,3 +7,10 @@
        loop:
          - DevOps
          - AWS
+ # Maps
+     - name: Print Technology name and duration
+       debug:
+         msg: Technology name is {{tech.name}} and duration is {{tech.duration}}
+       loop:
+         - {name: "DevOps", duration: 100Hr}
+         - {name: "AWS", duration: 60Hr}
