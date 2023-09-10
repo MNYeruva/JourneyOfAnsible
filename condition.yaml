@@ -1,0 +1,19 @@
+- name: Condition
+  hosts: all
+  vars:
+    a: 100
+    b: true  # Boolean Conditions
+  tasks:
+    - name: String Conditions
+      debug:
+        msg: Technology name is AWS DevOps
+      when: tech_name == "AWS DevOps"
+    - name: Numerical conditions
+      debug:
+        msg: a is greater than 10
+      when: a > 10
+    - name: boolean conditions
+      debug:
+        msg: b is true
+      when: b
+
