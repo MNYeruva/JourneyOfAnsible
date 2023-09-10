@@ -1,0 +1,9 @@
+ - name: Loops
+   hosts: all
+   tasks:
+     - name: Print Technology name
+       debug:
+         msg: Technology name is {{tech}}
+       loop:
+         - DevOps
+         - AWS
