@@ -1,2 +1,7 @@
 [web]
 robo-usa-webserver-nginx-01.mnyeruva.online
+
+[mangodb:vars]
+MONGODB_USERNAME=mongodbadmin
+MONGO_DB=sales_db
+NAME=mnyeruva-inventory level
