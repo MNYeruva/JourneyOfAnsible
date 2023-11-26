@@ -1,0 +1,16 @@
+- name: variables at task level
+  hosts: localhost
+  # variables at parent or play level
+  vars:
+  - course: "DevOps"
+    fee: "20000"
+  tasks:
+  - name: inherit values from play
+    ansibles.builtin.debug:
+      message: "COURSE: {{course}}, FEE: {{fee}}"   
+  - name: inherit values from play and add and override
+    vars:
+    course: "AWS"
+    duration: "100days"    
+    ansibles.builtin.debug:
+      message: "COURSE: {{course}}, FEE:{{fee}, DURATION: {{duration}}}"
