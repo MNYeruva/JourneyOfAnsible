@@ -1,6 +1,14 @@
 - name: variables in ansible
   hosts: web
+  #Play level variable
+  vars:
+    COURSE: DevOps
+    TRAINER: MNYeruva
+    DURATION: 100Days
   tasks:
   - name: print hello
     ansible.builtin.debug:
-      msg: "Hello"
+      Message: "Hello"
+  - name: print variable
+    ansible.builtin.debug:
+      msg: "Hello, I am learning {{COURSE}}, Trainer is {{TRAINER}}, Duration is {{DURATION}}"    
