@@ -1,0 +1,9 @@
+- name: simple condition
+  hosts: localhost
+  vars:
+    NAME: MNYeruva
+  tasks:
+  - name: run this, if name is MNYeruva
+    ansible.builtin.debug:
+      message: "Hello {{NAME}}"  
+    when: NAME == "MNYeruva"  

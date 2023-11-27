@@ -1,0 +1,25 @@
+- name: testing variable precedence
+  hosts: web
+  vars:
+   NAME: MNYeruva-play level
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: please enter name
+    private: false
+  tasks:
+  - name: variable at task level
+    vars:
+      NAME: MNYeruva-task level 
+    ansible.builtin.debug:
+      message: "name is: {{NAME}}"  
+
+
+# 1st command line variables
+# 2nd task level     
+# 3rd files
+# 4th prompt
+# 5th play level
+# 6th inventory
+# 7th roles
