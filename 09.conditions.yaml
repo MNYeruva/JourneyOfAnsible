@@ -10,3 +10,10 @@
     - name: print the linux command output
       ansible.builtin.debug:  
         message: "output is: {{output}}"
+    - name: print exit status
+        message: "output is: {{output.rc}}"   
+    - name: create user
+      become: yes # sudo access to create the user this task only
+      ansible.builtin.user:
+        name: roboshop
+      when: output.rc !=0      # This expression is true only this module is run
